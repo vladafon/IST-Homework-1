@@ -1,0 +1,31 @@
+﻿<Window x:Class="Homework_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework_1"
+        mc:Ignorable="d"
+        Title="DiplomaMaker" Height="449.454" Width="617.137">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="344*"/>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="126*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Получить список выпускников" HorizontalAlignment="Left" Margin="262,50,0,0" VerticalAlignment="Top" Width="186" Height="23" Click="Button_GetStudents_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="ExcelPathTextBox" HorizontalAlignment="Left" Height="23" Margin="67,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
+        <Label Content="Укажите путь к таблице:" HorizontalAlignment="Left" Margin="67,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.672,0.969" Width="144" Height="35"/>
+        <RichTextBox x:Name="StudentsTextBox" HorizontalAlignment="Left" Height="210" Margin="67,141,0,0" VerticalAlignment="Top" Width="341" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2">
+            <FlowDocument>
+                <Paragraph>
+                    <InlineUIContainer>
+                        <Grid Height="100" Width="100"/>
+                    </InlineUIContainer>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label Content="Список выпускников:" HorizontalAlignment="Left" Margin="67,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,-0.192"/>
+        <Button Content="Получить дипломы" HorizontalAlignment="Left" Margin="182,373,0,0" VerticalAlignment="Top" Width="134" Click="Button_GetDiploma_Click"/>
+
+    </Grid>
+</Window>
